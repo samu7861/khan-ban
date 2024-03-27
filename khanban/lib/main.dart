@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import "package:khanban/utils/colors.dart";
 
 
@@ -64,32 +64,34 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: AppColors.celeste,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: const Center(
+                child:  Center(
                   child: Text(
                     'KHAN/BAN',
-                    style: TextStyle(
-                      color: AppColors.azulOscuro,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "Roboto"
-                     ),
+                    style: GoogleFonts.monomaniacOne(
+                      fontSize: 36,
+                    ),
                   ),
                 ),
               ),
-              const Text(
+              const SizedBox(height: 29),
+              Text(
                 "Samuel Franco García",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
+                textAlign: TextAlign.center,
+                style: GoogleFonts.monda(
+                  color: AppColors.blanco,
+                  fontSize: 16,
+                )
               ),
-              const Text(
+              const SizedBox(height: 29),
+              Text(
                 "Go to contributions if you enjoyed the project",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
+                textAlign: TextAlign.center,
+                style: GoogleFonts.monda(
+                  color: AppColors.blanco,
+                  fontSize: 16,
+                )
               ),
+              const SizedBox(height: 24),
               SvgPicture.asset("assets/icons/box.svg", height: 45, width: 45, color: AppColors.celeste,)
             ],
           ),
