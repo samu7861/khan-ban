@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import "package:khanban/utils/colors.dart";
+
+
 
 
 void main() {
@@ -42,13 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
   
     return Scaffold(
-      backgroundColor: Color.fromRGBO(201, 231, 242, 1),
+      backgroundColor: AppColors.celeste,
       body: Center(
         child: Container(
           height: 280,
           width: 280,
           decoration: BoxDecoration(
-            color: Color(0xFF011826),
+            color: AppColors.azulOscuro,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
@@ -58,13 +61,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 200,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(201, 231, 242, 1),
+                  color: AppColors.celeste,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Center(
                   child: Text(
                     'KHAN/BAN',
-                    
+                    style: TextStyle(
+                      color: AppColors.azulOscuro,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Roboto"
+                     ),
                   ),
                 ),
               ),
@@ -82,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 20,
                 ),
               ),
-              SvgPicture.asset("assets/icon/token_FILL0_wght400_GRAD0_opsz24.svg", height: 45, width: 45, color: Color.fromRGBO(201, 231, 242, 1),)
+              SvgPicture.asset("assets/icons/box.svg", height: 45, width: 45, color: AppColors.celeste,)
             ],
           ),
         ),
