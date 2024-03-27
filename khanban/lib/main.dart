@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import "package:khanban/utils/colors.dart";
+import 'package:khanban/widgets/infoProyect.dart';
 
 
 
@@ -46,58 +46,27 @@ class _MyHomePageState extends State<MyHomePage> {
   
     return Scaffold(
       backgroundColor: AppColors.celeste,
-      body: Center(
-        child: Container(
-          height: 280,
-          width: 280,
-          decoration: BoxDecoration(
-            color: AppColors.azulOscuro,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Column(
-            children: [
-              const SizedBox(height: 15),
-              Container(
-                width: 200,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: AppColors.celeste,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child:  Center(
-                  child: Text(
-                    'KHAN/BAN',
-                    style: GoogleFonts.monomaniacOne(
-                      fontSize: 36,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 29),
-              Text(
-                "Samuel Franco García",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.monda(
-                  color: AppColors.blanco,
-                  fontSize: 16,
-                )
-              ),
-              const SizedBox(height: 29),
-              Text(
-                "Go to contributions if you enjoyed the project",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.monda(
-                  color: AppColors.blanco,
-                  fontSize: 16,
-                )
-              ),
-              const SizedBox(height: 24),
-              SvgPicture.asset("assets/icons/box.svg", height: 45, width: 45, color: AppColors.celeste,)
-            ],
-          ),
-        ),
+      body: Column(
+        children: [
+          const SizedBox(height: 286,),
+          Center(
+        child: InfoProyect()
       ),
-     
+      const SizedBox(height: 180,),
+      Container(
+        height: 56,
+        width: 82,
+        decoration: BoxDecoration(
+          color: AppColors.azulOscuro,
+          borderRadius: BorderRadius.circular(20),
+          ),
+        child: Center(
+          child: SvgPicture.asset("assets/icons/arrowright.svg", height: 45, width: 45, color: AppColors.celeste,),
+        ),
+        )
+
+        ],
+      )
     );
   }
 }
