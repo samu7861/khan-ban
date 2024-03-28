@@ -29,10 +29,10 @@ class _HomePageState extends State<HomePage> {
               height: 50,
               decoration: ShapeDecoration(
                   gradient: LinearGradient(
-                  begin: Alignment(1.00, 0.03),
-                  end: Alignment(-1, -0.03),
-                  colors: [ Color.fromRGBO(10, 73, 111, 1), Color.fromRGBO(118, 191, 235, 1)],
-                    ),
+                    begin: Alignment.centerRight,
+                    end: Alignment.centerLeft,
+                    colors: [ Color.fromRGBO(10, 73, 111, 1), Color.fromRGBO(118, 191, 235, 1) ],
+                  ),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                 ),
               child: Center(
