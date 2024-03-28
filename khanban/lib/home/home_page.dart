@@ -4,6 +4,7 @@ import 'package:khanban/utils/colors.dart';
 import 'package:khanban/widgets/infoProyect.dart';
 import 'package:khanban/widgets/next.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:khanban/home/widgets/no_board.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -45,7 +46,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               )
-          )
+          ),
+          const SizedBox(height: 50,),
+          NoBoard(),
         ],
       )
     );

@@ -2,8 +2,8 @@ class KanBan {
   int id;
   String title;
   String description;
-  String picture;
+  String person;
 
-  KanBan({required this.id, required this.title, required this.description, required this.picture});
+  KanBan({required this.id, required this.title, required this.description, required this.person});
 
 }
