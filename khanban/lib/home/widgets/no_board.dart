@@ -19,7 +19,7 @@ class NoBoard extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: 16),
+              SizedBox(height: 46),
               Text(
                 'You have no boards yet',
                 style: GoogleFonts.monda(
@@ -36,15 +36,7 @@ class NoBoard extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage(title: 'KHAN/BAN')),
-                  );
-                },
-                child: Image.asset("assets/images/Icono.png", height: 55, width: 55,),
-              )
+              
             ],
           ),
         ),
