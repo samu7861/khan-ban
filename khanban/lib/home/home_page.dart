@@ -8,9 +8,9 @@ import 'package:khanban/widgets/app_bar.dart';
 
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
+  const HomePage({Key? key,}) : super(key: key);
 
-  final String title;
+  
 
   @override
   State<HomePage> createState() => _HomePageState();

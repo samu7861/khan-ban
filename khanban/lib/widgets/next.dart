@@ -10,7 +10,7 @@ class Next extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HomePage(title: "khanban",)),
+          MaterialPageRoute(builder: (context) => HomePage()),
         );
       },
       child: Container(

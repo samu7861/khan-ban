@@ -1,3 +1,4 @@
+import 'package:khanban/home/home_page.dart';
 import "package:khanban/models/board_info.dart";
 import 'package:flutter/material.dart';
 import 'package:khanban/utils/colors.dart';
@@ -65,6 +66,7 @@ class _CreateBoardState extends State<CreateBoard> {
                     ),
                     SizedBox(height: 6),
                     const TextFieldBoard(),
+                    
                   ],
                 ),
                 ),
@@ -81,7 +83,27 @@ class _CreateBoardState extends State<CreateBoard> {
                 ),
               ],
             ),
-          )
+          ),
+          SizedBox(height: 46),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: Container(
+                height: 55,
+                width: 55,
+                decoration: BoxDecoration(
+                  color: AppColors.celeste,
+                  borderRadius: BorderRadius.circular(5),
+              ),
+                child: Center(
+                  child: Icon(Icons.save, size: 50, color: AppColors.azulOscuro,),
+                      ),
+                    ),
+                  ),                                  
         ],
       )
     );
