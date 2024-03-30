@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import "package:khanban/utils/colors.dart";
 import 'package:khanban/widgets/infoProyect.dart';
 import 'package:khanban/widgets/next.dart';
@@ -6,7 +8,14 @@ import 'package:khanban/widgets/next.dart';
 
 
 
-void main() {
+void main() async{
+
+  //hive initialization
+  await Hive.initFlutter();
+
+  //open box
+  var box = await Hive.openBox('myBox');
+
   runApp(const MyApp());
 }
 
